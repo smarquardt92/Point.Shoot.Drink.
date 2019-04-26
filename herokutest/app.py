@@ -31,13 +31,14 @@ def upload_file():
 
             cur = mysql.connection.cursor()
             #var = "SELECT * FROM mnmneqbmhy3vmj37.cocktails1 where Ingredients Like '%"+predict+"%';"
-            var = "SELECT Drink, Ingredients from mnmneqbmhy3vmj37.cocktails1 where Ingredients Like '%"+predict+"%';"
+            #var = ("SELECT Drink, Ingredients from mnmneqbmhy3vmj37.cocktails1 where Ingredients Like '%"+predict+"%';")
+            #cur.execute(var)
             
-            cur.execute(var)
+            cur.execute("SELECT Drink, Ingredients, Instructions from mnmneqbmhy3vmj37.cocktails1 where Ingredients Like '%"+predict+"%';")
             #cur.execute("SELECT * From allrecipes WHERE Ingredients LIKE '%Apple%'")
             data = cur.fetchall()
            
-            print(var)
+            #print(var)
         
             return render_template('index.html', object_list=data)
             #other_data= jsonify({'data': 'data'})
