@@ -1,9 +1,10 @@
 import os
 from flask import Flask, request, render_template, redirect, jsonify
 from flask_mysqldb import MySQL
+import pickle
 mysql = MySQL()
 from time import sleep
-
+from ML import classify
 app = Flask(__name__)
 
 app.config['MYSQL_USER'] = 'root'
@@ -27,8 +28,9 @@ def upload_file():
 
             # read the filename, this is part of the image file you uplaod
             filename = file.filename 
-            #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            #predict=call sarahs code
+            file.save(os.path.join("../uploads/", filename))
+            predict=classify.classifier(f"../uploads/{filename}")
+            print(predict)
             cur = mysql.connection.cursor()
             cur.execute("SELECT * From allrecipes WHERE Ingredients LIKE '%Apple%'")
             data = cur.fetchall()
