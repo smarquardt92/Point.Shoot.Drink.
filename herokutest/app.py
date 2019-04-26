@@ -4,13 +4,13 @@ from flask_mysqldb import MySQL
 import pickle
 mysql = MySQL()
 from time import sleep
-from ML import classify
+import classify
 app = Flask(__name__)
 
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Snowihop^9'
-app.config['MYSQL_DB'] = 'Recipes'
-app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'ju78b2yixa3evno4'
+app.config['MYSQL_PASSWORD'] = 'cqt4d0xvnqbtz1qt'
+app.config['MYSQL_DB'] = 'mnmneqbmhy3vmj37'
+app.config['MYSQL_HOST'] = 'ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'
 #mysql.init_app(app)
 
 
@@ -28,8 +28,8 @@ def upload_file():
 
             # read the filename, this is part of the image file you uplaod
             filename = file.filename 
-            file.save(os.path.join("../uploads/", filename))
-            predict=classify.classifier(f"../uploads/{filename}")
+            file.save(os.path.join("uploads/", filename))
+            predict=classify.classifier(f"uploads/{filename}")
             print(predict)
             cur = mysql.connection.cursor()
             cur.execute("SELECT * From allrecipes WHERE Ingredients LIKE '%Apple%'")
