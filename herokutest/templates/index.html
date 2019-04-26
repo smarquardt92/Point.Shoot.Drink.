@@ -143,7 +143,6 @@
                 <!--.divider-->
                 <p class="scroll-reveal" data-origin="top" data-distance="10%">Here is where you upload a photo of a fruit so we know what recipes to look for</p>
                
-        
                 <form method=post enctype=multipart/form-data>
                   <p><input type=file name=file></p>
                   <p><input type=submit value=Upload></p>
@@ -156,9 +155,18 @@
                     <th>Drink Name </th>
                     <th>Ingredients</th>
                     
-                    <tr>{{ object }}</tr>
-                    <tr> {{ object.Drink }}</tr>
-                    
+                    <!--<tr>{{ object }}</tr>-->
+                    <tr><b> {{ object[0] }} </b></tr>
+                    <br>
+                    <tr><i>Ingredients:</i>  {{ object[1] }}</tr>
+                    <br>
+                    <br>
+                    <tr> <i>Instructions:</i> {{ object[2] }}</tr>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                     {% endfor %}
                 </table>
             
