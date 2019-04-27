@@ -1,4 +1,4 @@
-# final_project
+# Point. Shoot. Drink.
 ## Fruits for Cocktails
 Sources:
 
