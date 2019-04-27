@@ -1,5 +1,5 @@
 # final_project
-## COMING SOON
+## Fruits for Cocktails
 Sources:
 
 Cocktail API:
