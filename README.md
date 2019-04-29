@@ -1,5 +1,5 @@
 # Point. Shoot. Drink.
-### Fruits for Cocktails - Using machine learning to ID fruit and querying a MySQL Database to return drink recipes 
+#### Using machine learning to ID fruit images and query a MySQL database to return drink recipes 
 #### Sources:
 
 Cocktail API:<br>
