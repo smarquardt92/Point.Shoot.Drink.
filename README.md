@@ -16,10 +16,10 @@ Python
 * Pandas
 * Numpy 
 
-MySQL
-Flask
-HTML
-Javascript
-CSS
+- MySQL
+- Flask
+- HTML
+- Javascript
+- CSS
 
 
