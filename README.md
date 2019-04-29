@@ -11,7 +11,7 @@ Model based from a model created by:<br>
 Adrian Rosebrock of pyimagesearch.com
 
 
-###Languages and Libraries used
+### Languages and Libraries used
 Python
 * Pandas
 * Numpy 
