@@ -24,6 +24,6 @@ Python
  CSS <br/>
 
 
-![website part 1](https://github.com/GreciaWhite/Point.Shoot.Drink./blob/master/Website1.png)
-![website part 2](https://github.com/GreciaWhite/Point.Shoot.Drink./blob/master/website2.png)
-![website part 3](https://github.com/GreciaWhite/Point.Shoot.Drink./blob/master/website3.png)
+![websitepart1](https://github.com/GreciaWhite/Point.Shoot.Drink./blob/master/Website1.png)
+![websitepart2](https://github.com/GreciaWhite/Point.Shoot.Drink./blob/master/website2.png)
+![websitepart3](https://github.com/GreciaWhite/Point.Shoot.Drink./blob/master/website3.png)
