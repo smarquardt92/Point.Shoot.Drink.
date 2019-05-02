@@ -23,10 +23,10 @@ def classifier (image1):
 # 	help="path to input image")
 # args = vars(ap.parse_args())
 
-	args = {'model': 'ML/predict.model', 'labelbin': 'ML/lb.pickle', 'image': image1}
+	args = {'model': '/app/herokutest/ML/predict.model', 'labelbin': '/app/herokutest/ML/lb.pickle', 'image': image1}
 
 	# load the image
-	image = cv2.imread(args["image"])
+	image = cv2.imread(args['image'])
 	output = image.copy()
 
 	# pre-process the image for classification
