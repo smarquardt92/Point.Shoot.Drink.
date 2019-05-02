@@ -1,5 +1,5 @@
 # USAGE
-# python train.py --dataset dataset --model pokedex.model --labelbin lb.pickle
+# python train.py --dataset dataset --model predict.model --labelbin lb.pickle
 
 # import the necessary packages
 from keras.preprocessing.image import ImageDataGenerator
@@ -81,15 +81,12 @@ aug = ImageDataGenerator(rotation_range=25, width_shift_range=0.1,
 	horizontal_flip=True, fill_mode="nearest")
 
 # initialize the model
-# print("[INFO] compiling model...")
-# model = SmallerVGGNet.build(width=IMAGE_DIMS[1], height=IMAGE_DIMS[0],
-# 	depth=IMAGE_DIMS[2], classes=len(lb.classes_))
-# opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
-# model.compile(loss="categorical_crossentropy", optimizer=opt,
-# 	metrics=["accuracy"])
-
-# load model
-model = load_model(args["model"])
+print("[INFO] compiling model...")
+model = SmallerVGGNet.build(width=IMAGE_DIMS[1], height=IMAGE_DIMS[0],
+	depth=IMAGE_DIMS[2], classes=len(lb.classes_))
+opt = Adam(lr=INIT_LR, decay=INIT_LR / EPOCHS)
+model.compile(loss="categorical_crossentropy", optimizer=opt,
+	metrics=["accuracy"])
 
 # train the network
 print("[INFO] training network...")
@@ -97,7 +94,7 @@ H = model.fit_generator(
 	aug.flow(trainX, trainY, batch_size=BS),
 	validation_data=(testX, testY),
 	steps_per_epoch=len(trainX) // BS,
-	epochs=EPOCHS, initial_epoch=101, verbose=1)
+	epochs=EPOCHS, verbose=1)
 
 # save the model to disk
 print("[INFO] serializing network...")
