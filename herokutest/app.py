@@ -4,7 +4,7 @@ from flask_mysqldb import MySQL
 import pickle
 mysql = MySQL()
 from time import sleep
-from ML import classify
+from .ML import classify
 
 app = Flask(__name__)
 app.config['MYSQL_USER'] = 'ju78b2yixa3evno4'
