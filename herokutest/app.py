@@ -23,7 +23,7 @@ def upload_file():
             # read the filename, this is part of the image file you uplaod
             filename = file.filename 
             file.save(os.path.join("/app/herokutest/uploads/", filename))
-            predict=classify.classifier(f"uploads/{filename}")
+            predict=classify.classifier(f"/app/herokutest/uploads/{filename}")
 
             cur = mysql.connection.cursor()
             
