@@ -16,6 +16,9 @@ Adrian Rosebrock of pyimagesearch.com
 Python
 * Pandas
 * Numpy 
+* Keras
+* Sklearn
+* OpenCV
 
  MySQL <br/>
  Flask <br/>
