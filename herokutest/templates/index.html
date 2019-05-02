@@ -141,7 +141,7 @@
                                 </svg>
                 </div>
                 <!--.divider-->
-                <p class="scroll-reveal" data-origin="top" data-distance="10%">Here is where you upload a photo of a fruit so we know what recipes to look for</p>
+                <p class="scroll-reveal" data-origin="top" data-distance="10%">Upload a photo of a fruit so we know what recipes to look for</p>
                
                 <form method=post enctype=multipart/form-data>
                   <p><input type=file name=file></p>
@@ -150,11 +150,11 @@
                 <br>
                 <br>
                 <table border =1>
+                    <tr>
+                            <thead><b>You chose {{ predict }}!</b></thead><br><br>
+                    </tr>
                     {% for object in object_list %}
                     
-            
-                    
-                    <!--<tr>{{ object }}</tr>-->
                     <tr><b> {{ object[0] }} </b></tr>
                     <br>
                     <tr><i>Ingredients:</i>  {{ object[1] }}</tr>
@@ -197,7 +197,7 @@
     <!--.menu-cart-->
 
     <a href="#0" class="cd-top">Top</a>
-
+<!-- -------------------CONTACT SECTION---------------------- -->
     <footer id="contact-us">
         <div class="container">
             <div class="footer-content">
