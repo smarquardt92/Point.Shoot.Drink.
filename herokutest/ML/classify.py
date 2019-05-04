@@ -56,7 +56,7 @@ def classifier (image1):
 	# show the output image
 	print("[INFO] {}".format(label))
 	cv2.imshow("Output", output)
-	cv2.waitKey(0)
+	# cv2.waitKey(0)
 	print("ready")
 
 	return label
